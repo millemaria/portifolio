@@ -28,7 +28,7 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: MotionVa
           Jamille<br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 to-zinc-500">Barbosa</span>
         </h1>
         <p className="mt-6 text-2xl md:text-4xl text-neutral-300 font-light tracking-widest uppercase drop-shadow-md">
-          Creative Developer.
+          Desenvolvedora Full Stack
         </p>
       </motion.div>
 
