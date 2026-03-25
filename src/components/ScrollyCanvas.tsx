@@ -58,7 +58,7 @@ export default function ScrollyCanvas({ scrollYProgress }: ScrollyCanvasProps) {
 
     const img = imgs[index];
     const { innerWidth, innerHeight } = window;
-    
+
     // Resize high-dpi canvas (optional, but innerWidth is okay for this)
     if (canvas.width !== innerWidth || canvas.height !== innerHeight) {
       canvas.width = innerWidth;
@@ -100,7 +100,7 @@ export default function ScrollyCanvas({ scrollYProgress }: ScrollyCanvasProps) {
     window.addEventListener("resize", handleResize);
 
     if (loaded && images.length > 0) {
-       renderFrame(Math.round(frameIndex.get()), images);
+      renderFrame(Math.round(frameIndex.get()), images);
     }
     return () => window.removeEventListener("resize", handleResize);
   }, [loaded, images, frameIndex]);

@@ -1,24 +1,28 @@
+import React from 'react';
+import Image from 'next/image';
+
 export default function About() {
   return (
-    <section className="bg-black text-white py-32 md:py-48 px-6 md:px-12 border-t border-white/5 relative overflow-hidden">
+    <section className="bg-brand-bg text-brand-text py-32 md:py-48 px-6 md:px-12 border-t border-brand-border relative overflow-hidden transition-colors duration-300">
       {/* Subtle background glow effect */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-zinc-800/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-brand-blue/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 translate-y-1/2 w-[600px] h-[600px] bg-brand-crimson/5 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Intro Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           <div className="lg:col-span-7">
-            <h3 className="text-5xl md:text-7xl font-bold tracking-tighter mb-10">
-              Sobre <span className="text-neutral-500">Mim</span>
+            <h3 className="font-outfit text-5xl md:text-7xl font-bold tracking-tighter mb-10">
+              Sobre <span className="text-brand-orange drop-shadow-md">Mim</span>
             </h3>
             
-            <div className="space-y-8 text-xl md:text-2xl text-neutral-400 font-light leading-relaxed">
+            <div className="space-y-8 text-xl md:text-2xl text-brand-muted font-light leading-relaxed">
               <p>
-                Sou uma <strong className="text-white font-medium">Desenvolvedora Full Stack</strong> com foco em entregar experiências digitais extraordinárias. Acredito que o código não deve apenas funcionar, mas deve ser elegante, performático e acessível.
+                Sou uma <strong className="text-brand-text text-white font-medium">Desenvolvedora Full Stack</strong> com foco em entregar experiências digitais extraordinárias. Acredito que o código não deve apenas funcionar, mas deve ser elegante, performático e acessível.
               </p>
               <p>
-                Minha especialidade é atuar em todas as frentes da aplicação, unindo o desenvolvimento de <strong className="text-white font-medium">interfaces dinâmicas e fluidas no front-end</strong> à construção de <strong className="text-white font-medium">arquiteturas robustas e escaláveis no back-end</strong>.
+                Minha especialidade é atuar em todas as frentes da aplicação, unindo o desenvolvimento de <strong className="text-brand-yellow font-medium drop-shadow-sm">interfaces dinâmicas e fluidas no front-end</strong> à construção de <strong className="text-brand-blue font-medium drop-shadow-sm">arquiteturas robustas e escaláveis no back-end</strong>.
               </p>
               <p>
                 Com experiência liderando projetos de impacto, busco constantemente inovação em cada linha de código, transformando desafios complexos em produtos digitais inovadores, seguros e focados na melhor experiência de uso possível para as pessoas.
@@ -27,68 +31,89 @@ export default function About() {
           </div>
 
           <div className="lg:col-span-5 relative group">
-            <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-neutral-950 border border-white/10 relative transition-transform duration-700 ease-out group-hover:scale-[1.02]">
-              <div className="absolute inset-0 bg-gradient-to-tr from-zinc-900 to-black" />
-              <div className="absolute inset-0 opacity-10 flex items-center justify-center mix-blend-overlay">
-                <svg className="w-48 h-48 text-white scale-150 rotate-12 transition-transform duration-1000 group-hover:rotate-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={0.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-brand-surface border border-brand-border relative transition-transform duration-700 ease-out group-hover:scale-[1.02] shadow-[0_0_40px_rgba(102,161,178,0.1)] group-hover:shadow-[0_0_60px_rgba(102,161,178,0.2)]">
+              <Image 
+                src="/images/photo.png"
+                alt="Jamille Barbosa"
+                fill
+                className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105 grayscale-[20%] group-hover:grayscale-0"
+                sizes="(max-width: 768px) 100vw, 40vw"
+              />
+              {/* Subtle glass overlay to blend with theme */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-brand-bg/40 to-transparent pointer-events-none opacity-60 group-hover:opacity-20 transition-opacity duration-700" />
+            </div>
+
+            {/* Download CV Button */}
+            <div className="mt-8 flex justify-center w-full">
+              <a 
+                href="/pdf/Jamille_Maria_Felix_Barbosa_Desenvolvedor.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-brand-surface border border-brand-border hover:border-brand-crimson/50 hover:bg-brand-hover text-brand-text font-medium transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(188,21,78,0.25)] group"
+              >
+                <span>Baixar Currículo</span>
+                <svg className="w-5 h-5 text-brand-crimson group-hover:translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
-              </div>
+              </a>
             </div>
           </div>
         </div>
 
         {/* Technical Stack Section */}
-        <div className="mt-40 border-t border-white/10 pt-20">
-          <div className="mb-14">
-            <h4 className="text-3xl md:text-5xl font-semibold tracking-tight text-white mb-4">
-              Minha <span className="text-neutral-500">Stack Técnica</span>
+        <div className="mt-40 border-t border-brand-border pt-20">
+          <div className="mb-14 text-center md:text-left">
+            <h4 className="font-outfit text-3xl md:text-5xl font-semibold tracking-tight text-brand-text mb-4">
+              Minha <span className="text-brand-blue drop-shadow-sm">Stack Técnica</span>
             </h4>
-            <p className="text-xl text-neutral-400 font-light">
+            <p className="text-xl text-brand-muted font-light">
               As principais ferramentas e tecnologias com as quais trabalho diariamente.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {/* Frontend & Mobile */}
-            <div className="bg-neutral-950/50 backdrop-blur-sm border border-white/10 p-8 rounded-3xl hover:bg-neutral-900 transition-colors duration-500 group">
-              <h5 className="text-neutral-500 uppercase tracking-widest text-sm font-semibold mb-8 group-hover:text-neutral-400 transition-colors">
+            <div className="bg-brand-surface border border-brand-border p-8 rounded-3xl hover:bg-brand-hover hover:border-brand-blue/30 hover:-translate-y-2 hover:shadow-[0_20px_40px_-20px_rgba(102,161,178,0.2)] transition-all duration-500 group relative overflow-hidden">
+              <div className="absolute -top-20 -right-20 w-40 h-40 bg-brand-blue/20 rounded-full blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+              <h5 className="text-brand-blue uppercase tracking-widest text-sm font-semibold mb-8 transition-colors relative z-10">
                 Frontend & Mobile
               </h5>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-5 py-2.5 bg-black border border-white/10 rounded-full text-sm font-medium text-neutral-200">React</span>
-                <span className="px-5 py-2.5 bg-black border border-white/10 rounded-full text-sm font-medium text-neutral-200">Next.js</span>
-                <span className="px-5 py-2.5 bg-black border border-white/10 rounded-full text-sm font-medium text-neutral-200">React Native</span>
-                <span className="px-5 py-2.5 bg-black border border-white/10 rounded-full text-sm font-medium text-neutral-200">TypeScript</span>
-                <span className="px-5 py-2.5 bg-black border border-white/10 rounded-full text-sm font-medium text-neutral-200">Jest</span>
+              <div className="flex flex-wrap gap-3 relative z-10">
+                {['React', 'Next.js', 'React Native', 'TypeScript', 'Jest'].map(tech => (
+                  <span key={tech} className="px-5 py-2.5 bg-brand-bg border border-brand-border rounded-full text-sm font-medium text-brand-text group-hover:border-brand-blue/30 transition-colors">
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
 
             {/* Backend & Databases */}
-            <div className="bg-neutral-950/50 backdrop-blur-sm border border-white/10 p-8 rounded-3xl hover:bg-neutral-900 transition-colors duration-500 group">
-              <h5 className="text-neutral-500 uppercase tracking-widest text-sm font-semibold mb-8 group-hover:text-neutral-400 transition-colors">
+            <div className="bg-brand-surface border border-brand-border p-8 rounded-3xl hover:bg-brand-hover hover:border-brand-crimson/30 hover:-translate-y-2 hover:shadow-[0_20px_40px_-20px_rgba(188,21,78,0.2)] transition-all duration-500 group relative overflow-hidden">
+              <div className="absolute -top-20 -right-20 w-40 h-40 bg-brand-crimson/20 rounded-full blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+              <h5 className="text-brand-crimson uppercase tracking-widest text-sm font-semibold mb-8 transition-colors relative z-10">
                 Backend & Databases
               </h5>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-5 py-2.5 bg-black border border-white/10 rounded-full text-sm font-medium text-neutral-200">Node.js</span>
-                <span className="px-5 py-2.5 bg-black border border-white/10 rounded-full text-sm font-medium text-neutral-200">Express</span>
-                <span className="px-5 py-2.5 bg-black border border-white/10 rounded-full text-sm font-medium text-neutral-200">Prisma</span>
-                <span className="px-5 py-2.5 bg-black border border-white/10 rounded-full text-sm font-medium text-neutral-200">MySQL</span>
-                <span className="px-5 py-2.5 bg-black border border-white/10 rounded-full text-sm font-medium text-neutral-200">HeidiSQL</span>
+              <div className="flex flex-wrap gap-3 relative z-10">
+                {['Node.js', 'Express', 'Prisma', 'MySQL', 'HeidiSQL'].map(tech => (
+                  <span key={tech} className="px-5 py-2.5 bg-brand-bg border border-brand-border rounded-full text-sm font-medium text-brand-text group-hover:border-brand-crimson/30 transition-colors">
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
 
             {/* Data Science & Infra */}
-            <div className="bg-neutral-950/50 backdrop-blur-sm border border-white/10 p-8 rounded-3xl hover:bg-neutral-900 transition-colors duration-500 group">
-              <h5 className="text-neutral-500 uppercase tracking-widest text-sm font-semibold mb-8 group-hover:text-neutral-400 transition-colors">
+            <div className="bg-brand-surface border border-brand-border p-8 rounded-3xl hover:bg-brand-hover hover:border-brand-orange/30 hover:-translate-y-2 hover:shadow-[0_20px_40px_-20px_rgba(216,126,51,0.2)] transition-all duration-500 group relative overflow-hidden">
+              <div className="absolute -top-20 -right-20 w-40 h-40 bg-brand-orange/20 rounded-full blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+              <h5 className="text-brand-orange uppercase tracking-widest text-sm font-semibold mb-8 transition-colors relative z-10">
                 Data Science & Infra
               </h5>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-5 py-2.5 bg-black border border-white/10 rounded-full text-sm font-medium text-neutral-200">Python</span>
-                <span className="px-5 py-2.5 bg-black border border-white/10 rounded-full text-sm font-medium text-neutral-200">Docker</span>
-                <span className="px-5 py-2.5 bg-black border border-white/10 rounded-full text-sm font-medium text-neutral-200">PySpark</span>
-                <span className="px-5 py-2.5 bg-black border border-white/10 rounded-full text-sm font-medium text-neutral-200">Pandas</span>
-                <span className="px-5 py-2.5 bg-black border border-white/10 rounded-full text-sm font-medium text-neutral-200">PM2</span>
+              <div className="flex flex-wrap gap-3 relative z-10">
+                {['Python', 'Docker', 'PySpark', 'Pandas', 'PM2'].map(tech => (
+                  <span key={tech} className="px-5 py-2.5 bg-brand-bg border border-brand-border rounded-full text-sm font-medium text-brand-text group-hover:border-brand-orange/30 transition-colors">
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
           </div>

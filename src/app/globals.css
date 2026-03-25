@@ -3,8 +3,45 @@
 @tailwind utilities;
 
 @layer base {
+  /* LIGHT MODE */
+  :root {
+    --bg-primary: #F8FAFC; 
+    --bg-surface: #FFFFFF;
+    --text-primary: #0F172A;
+    --text-muted: #475569;
+    
+    --brand-blue: #4B8A9E; 
+    --brand-crimson: #BC154E; 
+    --brand-orange: #D87E33;  
+    --brand-yellow: #D9A020; 
+    
+    /* Stronger and colored borders for Layout visibility */
+    --border-neutral: rgba(75, 138, 158, 0.25); 
+    --surface-hover: rgba(75, 138, 158, 0.06);
+    --glow-opacity: 0.5;
+  }
+
+  /* DARK MODE */
+  [data-theme='dark'] {
+    --bg-primary: #0F1115;
+    --bg-surface: #1A1D24;
+    --text-primary: #FFFFFF;
+    --text-muted: #9CA3AF;
+
+    --brand-blue: #66A1B2;
+    --brand-crimson: #BC154E;
+    --brand-orange: #D87E33;
+    --brand-yellow: #F9D57A;
+
+    --border-neutral: rgba(255, 255, 255, 0.08);
+    --surface-hover: rgba(255, 255, 255, 0.03);
+    --glow-opacity: 0.2;
+  }
+
   body {
-    @apply bg-black text-white antialiased;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.4s ease, color 0.4s ease;
     overflow-x: hidden;
   }
 }

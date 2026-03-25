@@ -11,43 +11,54 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="relative min-h-screen bg-black text-white py-32 px-6 md:px-12 z-20">
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-20">
-          <h3 className="text-5xl md:text-7xl font-bold tracking-tighter">
-            Projetos <span className="text-neutral-500">Selecionados</span>
+    <section className="relative min-h-screen bg-brand-bg border-t border-brand-border text-brand-text py-32 px-6 md:px-12 z-20 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="mb-20 text-center md:text-left">
+          <h3 className="font-outfit text-5xl md:text-7xl font-bold tracking-tighter">
+            Projetos <span className="text-brand-crimson drop-shadow-md">Selecionados</span>
           </h3>
-          <p className="mt-4 text-xl text-neutral-400 max-w-xl">
+          <p className="mt-4 text-xl text-brand-muted max-w-xl font-light">
            Uma coleção selecionada de projetos que destacam desempenho, estética e arquiteturas web modernas.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((proj) => (
-            <div
-              key={proj.id}
-              className={cn(
-                "group relative overflow-hidden rounded-2xl p-8 md:p-12 min-h-[400px] flex flex-col justify-end transition-all duration-700 ease-out",
-                "bg-white/[0.03] backdrop-blur-xl border border-white/[0.05]",
-                "hover:bg-white/[0.08] hover:border-white/[0.1] hover:-translate-y-2 hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.1)]"
-              )}
-            >
-              {/* Subtle hover glow layer */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none bg-gradient-to-b from-white/[0.01] to-transparent" />
-              
-              <div className="relative z-10">
-                <p className="text-xs uppercase tracking-widest text-neutral-400 mb-2 font-mono">
-                  {String(proj.id).padStart(2, "0")} / 04
-                </p>
-                <h4 className="text-3xl font-semibold tracking-tight text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-neutral-500 transition-colors">
-                  {proj.title}
-                </h4>
-                <p className="text-neutral-400 group-hover:text-neutral-300 transition-colors">
-                  {proj.desc}
-                </p>
+          {projects.map((proj) => {
+            return (
+              <div
+                key={proj.id}
+                className={cn(
+                  "group relative overflow-hidden rounded-3xl p-8 md:p-12 min-h-[400px] flex flex-col justify-end transition-all duration-700 ease-out cursor-pointer",
+                  "bg-brand-surface border border-brand-border",
+                  "hover:bg-brand-hover hover:border-brand-crimson/30 hover:-translate-y-2 hover:shadow-[0_20px_40px_-20px_rgba(188,21,78,0.25)]"
+                )}
+              >
+                {/* Vibrant glow overlay */}
+                <div className="absolute -top-32 -right-32 w-64 h-64 bg-brand-crimson/20 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                
+                <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0">
+                  
+                    <div className="w-10 h-10 rounded-full bg-brand-bg/50 border border-brand-border flex items-center justify-center text-brand-text group-hover:bg-brand-crimson group-hover:border-transparent group-hover:text-white transition-colors duration-300">
+                      <svg className="w-5 h-5 -rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <p className="text-sm uppercase tracking-widest text-brand-orange mb-3 font-medium">
+                    {String(proj.id).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
+                  </p>
+                  <h4 className="font-outfit text-3xl font-bold tracking-tight text-brand-text mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-yellow group-hover:to-brand-orange transition-colors">
+                    {proj.title}
+                  </h4>
+                  <p className="text-brand-muted font-light leading-relaxed line-clamp-3">
+                    {proj.desc}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
