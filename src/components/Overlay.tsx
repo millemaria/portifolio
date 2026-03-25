@@ -15,8 +15,8 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: MotionVa
   const y2 = useTransform(scrollYProgress, [0.2, 0.3, 0.45, 0.55], [50, 0, 0, -50]);
 
   // Section 3: Right
-  const opacity3 = useTransform(scrollYProgress, [0.55, 0.65, 0.8, 0.9], [0, 1, 1, 0]);
-  const x3 = useTransform(scrollYProgress, [0.55, 0.65, 0.8, 0.9], [100, 0, 0, 100]);
+  // const opacity3 = useTransform(scrollYProgress, [0.55, 0.65, 0.8, 0.9], [0, 1, 1, 0]);
+  // const x3 = useTransform(scrollYProgress, [0.55, 0.65, 0.8, 0.9], [100, 0, 0, 100]);
 
   return (
     <div className="absolute inset-0 z-10 w-full h-full max-w-7xl mx-auto px-6 md:px-12 pointer-events-none">

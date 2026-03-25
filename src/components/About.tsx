@@ -35,7 +35,7 @@ export default function About() {
               ) : (
                 <>
                   <p>
-                    I am a <strong className="text-brand-text text-white font-medium">Full Stack Developer</strong> focused on delivering extraordinary digital experiences. I believe code shouldn't just work—it should be elegant, performant, and accessible.
+                    I am a <strong className="text-brand-text text-white font-medium">Full Stack Developer</strong> focused on delivering extraordinary digital experiences. I believe code shouldn&apos;t just work—it should be elegant, performant, and accessible.
                   </p>
                   <p>
                     My specialty lies in working across the entire application stack, bridging the development of <strong className="text-brand-yellow font-medium drop-shadow-sm">dynamic and fluid front-end interfaces</strong> with the construction of <strong className="text-brand-blue font-medium drop-shadow-sm">robust and scalable back-end architectures</strong>.
