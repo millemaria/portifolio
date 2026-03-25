@@ -38,14 +38,14 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: MotionVa
         className="absolute inset-y-0 left-6 md:left-12 flex flex-col justify-center will-change-transform"
       >
         <h2 className="text-5xl md:text-8xl font-bold tracking-tight text-white max-w-3xl drop-shadow-xl leading-[1.1]">
-          I build digital <br />
-          experiences that feel <br />
-          <span className="italic text-neutral-400 font-serif">alive.</span>
+          Criando o visível.  <br />
+          Sustentando o <br />
+          <span className="italic text-neutral-400 font-serif">invisível</span>
         </h2>
       </motion.div>
 
       {/* 60% -> "Bridging design and engineering." */}
-      <motion.div 
+      {/* <motion.div 
         style={{ opacity: opacity3, x: x3 }}
         className="absolute inset-y-0 right-6 md:right-12 flex flex-col justify-center items-end text-right will-change-transform"
       >
@@ -59,7 +59,7 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: MotionVa
             engineering_
           </span>
         </h2>
-      </motion.div>
+      </motion.div> */}
 
     </div>
   );

@@ -5,6 +5,7 @@ import { useScroll } from "framer-motion";
 import ScrollyCanvas from "@/components/ScrollyCanvas";
 import Overlay from "@/components/Overlay";
 import Projects from "@/components/Projects";
+import About from "@/components/About";
 import NanoBanana from "@/components/NanoBanana";
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
       </div>
       
       {/* Subsequent content */}
+      <About />
       <Projects />
       
       {/* Extra floating UI element */}

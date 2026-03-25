@@ -1,10 +1,12 @@
 import { cn } from "@/lib/utils";
 
 const projects = [
-  { id: 1, title: "Lumina Vision", desc: "WebGL Experiential Site" },
-  { id: 2, title: "Aura Commerce", desc: "Headless eCommerce UI" },
-  { id: 3, title: "Vortex Engine", desc: "Physics Simulation Layer" },
-  { id: 4, title: "Zenith Agency", desc: "Awwwards SOTD Winner" },
+  { id: 1, title: "Portal da Transparência", desc: "Desenvolvimento de uma plataforma de alta performance com Next.js, focada em acessibilidade e transparência pública. Um projeto que não apenas serve ao cidadão, mas define padrões: em 2025, onde foi coroado com o Selo Diamante de Transparência, o nível mais alto de excelência em dados abertos." },
+  { id: 2, title: "Jaboatão Oficial", desc: "Unindo Next.js e Express, liderei o desenvolvimento do novo Site Oficial de Jaboatão. Foco total em performance e experiência do usuário (UX), servindo como o hub principal de informações e serviços para uma das maiores cidades de Pernambuco." },
+  { id: 3, title: "Diário Oficial do Jaboatão dos Guararapes", desc: "Desenvolvimento do novo ecossistema do Diário Oficial. Um projeto focado em UX moderno e um motor de busca de alta precisão, garantindo acessibilidade e rapidez na entrega de informações governamentais cruciais." },
+  { id: 4, title: "Libera Via", desc: "O Liberavia moderniza a logística urbana através da tecnologia. Um sistema focado na transparência e agilidade para processos de liberação e uso do trânsito, conectando a administração pública às necessidades imediatas das vias." },
+  { id: 5, title: "Libera Via", desc: "O Liberavia moderniza a logística urbana através da tecnologia. Um sistema focado na transparência e agilidade para processos de liberação e uso do solo, conectando a administração pública às necessidades imediatas de infraestrutura." },
+  { id: 6, title: "Road Tech", desc: "Um ecossistema de aprendizado focado em segurança cibernética e carreira. O Road Tech simplifica a complexidade do mundo tech, oferecendo as ferramentas necessárias para que qualquer pessoa aprenda a navegar e a construir seu próprio futuro na programação." },
 ];
 
 export default function Projects() {
@@ -13,10 +15,10 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-20">
           <h3 className="text-5xl md:text-7xl font-bold tracking-tighter">
-            Selected <span className="text-neutral-500">Works</span>
+            Projetos <span className="text-neutral-500">Selecionados</span>
           </h3>
           <p className="mt-4 text-xl text-neutral-400 max-w-xl">
-            A curated collection of projects highlighting performance, aesthetics, and modern web architectures.
+           Uma coleção selecionada de projetos que destacam desempenho, estética e arquiteturas web modernas.
           </p>
         </div>
 
