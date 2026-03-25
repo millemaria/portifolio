@@ -1,9 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function About() {
+  const { language } = useLanguage();
   return (
-    <section className="bg-brand-bg text-brand-text py-32 md:py-48 px-6 md:px-12 border-t border-brand-border relative overflow-hidden transition-colors duration-300">
+    <section className="bg-brand-bg text-brand-text py-32 md:py-48 px-6 md:px-12 relative overflow-hidden transition-colors duration-300">
       {/* Subtle background glow effect */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-brand-blue/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 translate-y-1/2 w-[600px] h-[600px] bg-brand-crimson/5 rounded-full blur-[150px] pointer-events-none" />
@@ -11,22 +13,38 @@ export default function About() {
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Intro Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-7">
-            <h3 className="font-outfit text-5xl md:text-7xl font-bold tracking-tighter mb-10">
-              Sobre <span className="text-brand-orange drop-shadow-md">Mim</span>
+            <h3 className="font-outfit text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-8 md:mb-10 text-center lg:text-left">
+              {language === 'pt' ? 'Sobre ' : 'About '} <span className="text-brand-orange drop-shadow-md">{language === 'pt' ? 'Mim' : 'Me'}</span>
             </h3>
             
-            <div className="space-y-8 text-xl md:text-2xl text-brand-muted font-light leading-relaxed">
-              <p>
-                Sou uma <strong className="text-brand-text text-white font-medium">Desenvolvedora Full Stack</strong> com foco em entregar experiências digitais extraordinárias. Acredito que o código não deve apenas funcionar, mas deve ser elegante, performático e acessível.
-              </p>
-              <p>
-                Minha especialidade é atuar em todas as frentes da aplicação, unindo o desenvolvimento de <strong className="text-brand-yellow font-medium drop-shadow-sm">interfaces dinâmicas e fluidas no front-end</strong> à construção de <strong className="text-brand-blue font-medium drop-shadow-sm">arquiteturas robustas e escaláveis no back-end</strong>.
-              </p>
-              <p>
-                Com experiência liderando projetos de impacto, busco constantemente inovação em cada linha de código, transformando desafios complexos em produtos digitais inovadores, seguros e focados na melhor experiência de uso possível para as pessoas.
-              </p>
+            <div className="space-y-6 md:space-y-8 text-lg md:text-2xl text-brand-muted font-light leading-relaxed text-center lg:text-left">
+              {language === 'pt' ? (
+                <>
+                  <p>
+                    Sou uma <strong className="text-brand-text text-white font-medium">Desenvolvedora Full Stack</strong> com foco em entregar experiências digitais extraordinárias. Acredito que o código não deve apenas funcionar, mas deve ser elegante, performático e acessível.
+                  </p>
+                  <p>
+                    Minha especialidade é atuar em todas as frentes da aplicação, unindo o desenvolvimento de <strong className="text-brand-yellow font-medium drop-shadow-sm">interfaces dinâmicas e fluidas no front-end</strong> à construção de <strong className="text-brand-blue font-medium drop-shadow-sm">arquiteturas robustas e escaláveis no back-end</strong>.
+                  </p>
+                  <p>
+                    Com experiência liderando projetos de impacto, busco constantemente inovação em cada linha de código, transformando desafios complexos em produtos digitais inovadores, seguros e focados na melhor experiência de uso possível para as pessoas.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p>
+                    I am a <strong className="text-brand-text text-white font-medium">Full Stack Developer</strong> focused on delivering extraordinary digital experiences. I believe code shouldn't just work—it should be elegant, performant, and accessible.
+                  </p>
+                  <p>
+                    My specialty lies in working across the entire application stack, bridging the development of <strong className="text-brand-yellow font-medium drop-shadow-sm">dynamic and fluid front-end interfaces</strong> with the construction of <strong className="text-brand-blue font-medium drop-shadow-sm">robust and scalable back-end architectures</strong>.
+                  </p>
+                  <p>
+                    With experience leading impactful projects, I constantly seek innovation in every line of code, transforming complex challenges into secure, innovative digital products focused on providing the best possible user experience.
+                  </p>
+                </>
+              )}
             </div>
           </div>
 
@@ -46,12 +64,12 @@ export default function About() {
             {/* Download CV Button */}
             <div className="mt-8 flex justify-center w-full">
               <a 
-                href="/pdf/Jamille_Maria_Felix_Barbosa_Desenvolvedor.pdf" 
+                href="/pdf/Curriculo_Jamille_Maria_PT.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-brand-surface border border-brand-border hover:border-brand-crimson/50 hover:bg-brand-hover text-brand-text font-medium transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(188,21,78,0.25)] group"
               >
-                <span>Baixar Currículo</span>
+                <span>{language === 'pt' ? 'Baixar Currículo' : 'Download Resume'}</span>
                 <svg className="w-5 h-5 text-brand-crimson group-hover:translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
@@ -64,10 +82,10 @@ export default function About() {
         <div className="mt-40 border-t border-brand-border pt-20">
           <div className="mb-14 text-center md:text-left">
             <h4 className="font-outfit text-3xl md:text-5xl font-semibold tracking-tight text-brand-text mb-4">
-              Minha <span className="text-brand-blue drop-shadow-sm">Stack Técnica</span>
+              {language === 'pt' ? 'Minha ' : 'My '}<span className="text-brand-blue drop-shadow-sm">{language === 'pt' ? 'Stack Técnica' : 'Tech Stack'}</span>
             </h4>
             <p className="text-xl text-brand-muted font-light">
-              As principais ferramentas e tecnologias com as quais trabalho diariamente.
+              {language === 'pt' ? 'As principais ferramentas e tecnologias com as quais trabalho diariamente.' : 'The core tools and technologies I work with daily.'}
             </p>
           </div>
 
@@ -79,7 +97,7 @@ export default function About() {
                 Frontend & Mobile
               </h5>
               <div className="flex flex-wrap gap-3 relative z-10">
-                {['React', 'Next.js', 'React Native', 'TypeScript', 'Jest'].map(tech => (
+                {['React', 'Next.js', 'React Native', 'TypeScript', 'Jest', 'TailwindCSS','Vite'].map(tech => (
                   <span key={tech} className="px-5 py-2.5 bg-brand-bg border border-brand-border rounded-full text-sm font-medium text-brand-text group-hover:border-brand-blue/30 transition-colors">
                     {tech}
                   </span>
@@ -94,7 +112,7 @@ export default function About() {
                 Backend & Databases
               </h5>
               <div className="flex flex-wrap gap-3 relative z-10">
-                {['Node.js', 'Express', 'Prisma', 'MySQL', 'HeidiSQL'].map(tech => (
+                {['Node.js', 'Express', 'Prisma', 'MySQL', 'HeidiSQL','CI/CD'].map(tech => (
                   <span key={tech} className="px-5 py-2.5 bg-brand-bg border border-brand-border rounded-full text-sm font-medium text-brand-text group-hover:border-brand-crimson/30 transition-colors">
                     {tech}
                   </span>

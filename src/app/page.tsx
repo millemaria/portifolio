@@ -8,6 +8,9 @@ import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import ThemeToggle from "@/components/ThemeToggle";
+import ScrollToTop from "@/components/ScrollToTop";
+import LanguageToggle from "@/components/LanguageToggle";
+import Divider from "@/components/Divider";
 
 
 export default function Home() {
@@ -29,11 +32,16 @@ export default function Home() {
       </div>
 
       {/* Subsequent content */}
+      <Divider />
       <About />
+      <Divider />
       <Projects />
+      <Divider />
       <Contact />
 
       <ThemeToggle />
+      <ScrollToTop />
+      <LanguageToggle />
     </main>
   );
 }

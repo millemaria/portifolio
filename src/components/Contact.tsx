@@ -1,19 +1,24 @@
 import React from 'react';
+import Image from 'next/image';
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Contact() {
+  const { language } = useLanguage();
   return (
     <section className="bg-brand-bg text-brand-text py-20 px-6 md:px-12 relative overflow-hidden transition-colors duration-300">
+      {/* Tech Architectural Grid Overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--border-neutral)_1px,transparent_1px),linear-gradient(to_bottom,var(--border-neutral)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_100%,#000_20%,transparent_100%)] pointer-events-none opacity-60 z-0" />
       
       {/* Container Principal */}
       <div className="max-w-6xl mx-auto relative z-10 mb-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
         {/* Esquerda: Textos e Botões */}
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-8">
-          <h3 className="font-outfit text-5xl md:text-6xl font-bold tracking-tighter text-brand-blue">
-            Fale comigo!
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 md:space-y-8">
+          <h3 className="font-outfit text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-brand-blue">
+            {language === 'pt' ? 'Fale comigo!' : 'Get in touch!'}
           </h3>
           
-          <div className="space-y-6 text-brand-muted text-lg mt-8">
+          <div className="space-y-4 md:space-y-6 text-brand-muted text-base md:text-lg mt-6 md:mt-8 w-full">
             <div className="flex items-center gap-4 justify-center lg:justify-start">
               <svg className="w-6 h-6 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -44,35 +49,18 @@ export default function Contact() {
         </div>
 
         {/* Direita: Celular Flutuante Iluminado */}
-        <div className="flex justify-center relative mt-16 lg:mt-0">
-          <div className="w-[280px] h-[580px] bg-neutral-900 rounded-[45px] border-[8px] border-neutral-800 shadow-[20px_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden flex items-center justify-center transform -rotate-12 hover:-translate-y-4 hover:rotate-0 transition-all duration-700 ease-out z-10 group">
-            
-            {/* Fundo da tela do celular simulando vegetação/estampa através de um super gradiente estilizado */}
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/30 via-brand-bg to-brand-crimson/20 opacity-90 group-hover:scale-110 transition-transform duration-1000" />
-            
-            {/* Ícone Central de Balão de Mensagem */}
-            <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center relative shadow-lg z-10">
-              <span className="flex gap-1.5">
-                <span className="w-2.5 h-2.5 bg-neutral-800 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                <span className="w-2.5 h-2.5 bg-neutral-800 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                <span className="w-2.5 h-2.5 bg-neutral-800 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
-              </span>
-              {/* Ponta do balão */}
-              <div 
-                className="absolute -bottom-2 -left-1 w-6 h-6 bg-white rotate-45" 
-                style={{ clipPath: 'polygon(100% 0, 0 100%, 100% 100%)' }} 
-              />
-            </div>
-
-            {/* Notch da Câmera do iPhone */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-36 h-7 bg-neutral-800 rounded-b-2xl z-20 flex items-center justify-center">
-              <div className="w-12 h-1.5 bg-neutral-900 rounded-full" />
-              <div className="w-2 h-2 rounded-full bg-blue-900/50 absolute right-4" />
-            </div>
+        <div className="flex justify-center relative mt-12 lg:mt-0 group perspective-1000 scale-90 md:scale-100">
+          <div className="w-[300px] md:w-[320px] h-[580px] md:h-[600px] relative transform -rotate-12 lg:group-hover:-translate-y-4 lg:group-hover:rotate-0 transition-all duration-700 ease-out z-10">
+            <Image 
+              src="/icons/cell.png" 
+              alt="Celular" 
+              fill 
+              className="object-contain drop-shadow-[10px_20px_30px_rgba(0,0,0,0.5)]"
+            />
           </div>
           
           {/* Sombra embaixo do celular */}
-          <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-48 h-6 bg-black/60 rounded-[100%] blur-xl transition-all duration-700" />
+          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-48 h-6 bg-black/60 rounded-[100%] blur-xl transition-all duration-700 group-hover:w-40 group-hover:opacity-40" />
         </div>
       </div>
 
@@ -80,11 +68,11 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto border-t border-brand-border pt-10 flex flex-col md:flex-row justify-between items-center gap-8 text-brand-muted text-sm font-light z-10 relative">
         
         {/* Assinatura Esquerda */}
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-4 text-center md:text-left">
-           <span className="font-outfit text-3xl font-light text-brand-text">Jamille<span className="font-semibold">Barbosa</span></span>
-           <div className="flex flex-col">
-             <span>© {new Date().getFullYear()} por Jamille Barbosa.</span>
-             <span>Todos os direitos reservados.</span>
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4 text-center md:text-left">
+           <span className="font-outfit text-2xl md:text-3xl font-light text-brand-text">Jamille<span className="font-semibold">Barbosa</span></span>
+           <div className="flex flex-col text-xs md:text-sm">
+             <span>© {new Date().getFullYear()} {language === 'pt' ? 'por Jamille Barbosa.' : 'by Jamille Barbosa.'}</span>
+             <span>{language === 'pt' ? 'Todos os direitos reservados.' : 'All rights reserved.'}</span>
            </div>
         </div>
         
