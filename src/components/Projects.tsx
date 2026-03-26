@@ -133,7 +133,7 @@ export default function Projects() {
                   {/* Descrição que aparece inteira apenas no Hover no desktop, mas nativa no mobile */}
                   <div className="grid grid-rows-[1fr] md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
                     <div className="overflow-hidden">
-                      <p className="text-white md:text-[#BC154E] text-sm md:text-base font-medium leading-relaxed mt-4 drop-shadow-md">
+                      <p className="text-[#BC154E] dark:text-[#F9D57A] text-sm md:text-base font-medium leading-relaxed mt-4 drop-shadow-md">
                         {language === 'pt' ? proj.desc : proj.descEn}
                       </p>
                     </div>

@@ -23,7 +23,7 @@ export default function About() {
               {language === 'pt' ? (
                 <>
                   <p>
-                    Sou uma <strong className="text-brand-text text-white font-medium">Desenvolvedora Full Stack</strong> com foco em entregar experiências digitais extraordinárias. Acredito que o código não deve apenas funcionar, mas deve ser elegante, performático e acessível.
+                    Sou uma <strong className="text-brand-text text-brand-yellow font-medium">Desenvolvedora Full Stack</strong> com foco em entregar experiências digitais extraordinárias. Acredito que o código não deve apenas funcionar, mas deve ser elegante, performático e acessível.
                   </p>
                   <p>
                     Minha especialidade é atuar em todas as frentes da aplicação, unindo o desenvolvimento de <strong className="text-brand-yellow font-medium drop-shadow-sm">interfaces dinâmicas e fluidas no front-end</strong> à construção de <strong className="text-brand-blue font-medium drop-shadow-sm">arquiteturas robustas e escaláveis no back-end</strong>.
