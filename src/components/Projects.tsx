@@ -40,12 +40,12 @@ const projects = [
   },
   { 
     id: 5, 
-    title: "Data Lake ENEM", 
-    titleEn: "ENEM Data Lake",
-    desc: "Este projeto implementa uma arquitetura robusta de Data Lake local utilizando contêineres Docker para orquestrar a extração, processamento e análise dos microdados do ENEM (Exame Nacional do Ensino Médio).O ambiente é 100% isolado, idempotente e reproduzível, trazendo o poder do Apache Spark (PySpark) para lidar com volumetria de Big Data (arquivos CSVs de múltiplos gigabytes) convertendo-os em formatos colunares altamente otimizados.", 
-    descEn: "This project implements a robust local Data Lake architecture using Docker containers to orchestrate the extraction, processing, and analysis of ENEM (National High School Exam) microdata. The environment is 100% isolated, idempotent, and reproducible, leveraging the power of Apache Spark (PySpark) to handle Big Data volumes (multi-gigabyte CSVs) by converting them into highly optimized columnar formats.",
-    image: "/projetos/datalake.jpeg",
-    link: "https://github.com/millemaria/ProjetoDataLakeEnem"
+    title: "Carteira PCD", 
+    titleEn: "PCD Card",
+    desc: "Sistema para solicitação e gestão de carteiras para pessoas com deficiência. Transforma um processo físico burocrático em uma experiência digital fluida, garantindo prioridade e direitos com segurança e agilidade.", 
+    descEn: "System for requesting and managing identification cards for people with disabilities. Transforms a bureaucratic physical process into a fluid digital experience, ensuring priority and rights with security and agility.",
+    image: "/projetos/pcd.png",
+    link: "#"
   },
   { 
     id: 6, 
@@ -56,8 +56,17 @@ const projects = [
     image: "/projetos/Roadtech.png",
     link: "https://karoiynarolim.github.io/RoadTech/"
   },
-   { 
+    { 
     id: 7, 
+    title: "Data Lake ENEM", 
+    titleEn: "ENEM Data Lake",
+    desc: "Este projeto implementa uma arquitetura robusta de Data Lake local utilizando contêineres Docker para orquestrar a extração, processamento e análise dos microdados do ENEM (Exame Nacional do Ensino Médio).O ambiente é 100% isolado, idempotente e reproduzível, trazendo o poder do Apache Spark (PySpark) para lidar com volumetria de Big Data (arquivos CSVs de múltiplos gigabytes) convertendo-os em formatos colunares altamente otimizados.", 
+    descEn: "This project implements a robust local Data Lake architecture using Docker containers to orchestrate the extraction, processing, and analysis of ENEM (National High School Exam) microdata. The environment is 100% isolated, idempotent, and reproducible, leveraging the power of Apache Spark (PySpark) to handle Big Data volumes (multi-gigabyte CSVs) by converting them into highly optimized columnar formats.",
+    image: "/projetos/datalake.jpeg",
+    link: "https://github.com/millemaria/ProjetoDataLakeEnem"
+  },
+   { 
+    id: 8, 
     title: "Multimodal AI Agent", 
     titleEn: "Multimodal AI Agent",
     desc: "Agente de Inteligência Artificial multimodal capaz de analisar imagens combinando Visão Computacional local (OpenCV + PyTorch) com LLM de última geração (Google Gemini), servido via API REST com FastAPI e containerizado com Docker.", 
