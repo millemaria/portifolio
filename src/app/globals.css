@@ -5,8 +5,8 @@
 @layer base {
   /* LIGHT MODE */
   :root {
-    --bg-primary: #F8FAFC; 
-    --bg-surface: #FFFFFF;
+    --bg-primary: #dbe0e7ea; 
+    --bg-surface: #fcfafac5;
     --text-primary: #0F172A;
     --text-muted: #475569;
     
@@ -23,7 +23,7 @@
 
   /* DARK MODE */
   [data-theme='dark'] {
-    --bg-primary: #0F1115;
+    --bg-primary: #0f1115e8;
     --bg-surface: #1A1D24;
     --text-primary: #FFFFFF;
     --text-muted: #9CA3AF;
