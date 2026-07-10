@@ -21,6 +21,7 @@ export default function Home() {
     offset: ["start start", "end end"]
   });
 
+
   return (
     <main className="min-h-screen bg-brand-bg text-brand-text selection:bg-brand-bg selection:text-brand-yellow">
       {/* 500vh scrollable scrollytelling area */}

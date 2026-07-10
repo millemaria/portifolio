@@ -64,7 +64,7 @@ export default function About() {
             {/* Download CV Button */}
             <div className="mt-8 flex justify-center w-full">
               <a 
-                href="/pdf/Curriculo_Jamille_Maria_PT.pdf" 
+                href="/pdf/cv_jamille_maria_2026.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-brand-surface border border-brand-border hover:border-brand-crimson/50 hover:bg-brand-hover text-brand-text font-medium transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(188,21,78,0.25)] group"
@@ -199,7 +199,7 @@ export default function About() {
                   <span className="text-brand-blue/30 font-outfit font-bold text-4xl leading-none select-none group-hover:text-brand-blue/50 transition-colors">01</span>
                 </div>
                 <div className="flex flex-wrap gap-2.5">
-                  {['React', 'Next.js', 'React Native', 'TypeScript', 'Jest', 'TailwindCSS', 'Vite'].map(tech => (
+                  {['React', 'Next.js', 'React Native','Angular', 'Vue.js', 'TypeScript', 'Jest', 'TailwindCSS', 'Vite'].map(tech => (
                     <span key={tech} className="px-4 py-2 rounded-xl text-sm font-medium text-brand-text bg-brand-bg border border-brand-border group-hover:border-brand-blue/25 transition-all duration-300 hover:bg-brand-blue/10 hover:border-brand-blue/50 hover:text-brand-blue cursor-default">
                       {tech}
                     </span>
@@ -227,7 +227,7 @@ export default function About() {
                   <span className="text-brand-crimson/30 font-outfit font-bold text-4xl leading-none select-none group-hover:text-brand-crimson/50 transition-colors">02</span>
                 </div>
                 <div className="flex flex-wrap gap-2.5">
-                  {['Node.js', 'Express', 'Prisma', 'MySQL', 'HeidiSQL', 'PySpark', 'FastAPI', 'CI/CD'].map(tech => (
+                  {['Node.js', 'Python', 'Express', 'Fastify', 'Prisma', 'Sequelize', 'API REST','MySQL', 'HeidiSQL', 'PySpark', 'FastAPI', 'CI/CD'].map(tech => (
                     <span key={tech} className="px-4 py-2 rounded-xl text-sm font-medium text-brand-text bg-brand-bg border border-brand-border group-hover:border-brand-crimson/25 transition-all duration-300 hover:bg-brand-crimson/10 hover:border-brand-crimson/50 hover:text-brand-crimson cursor-default">
                       {tech}
                     </span>
@@ -255,7 +255,7 @@ export default function About() {
                   <span className="text-brand-orange/30 font-outfit font-bold text-4xl leading-none select-none group-hover:text-brand-orange/50 transition-colors">03</span>
                 </div>
                 <div className="flex flex-wrap gap-2.5">
-                  {['Python', 'Docker', 'Pandas', 'NumPy', 'Jupyter Notebook', 'Apache Spark', 'PM2', 'Linux', 'GCP', 'Git', 'GitHub', 'GitLab'].map(tech => (
+                  {['Python', 'Docker', 'Pandas', 'NumPy', 'Jupyter Notebook', 'Apache Spark', 'PM2', 'Linux', 'GCP', 'Vercel', 'Git', 'GitHub', 'GitLab'].map(tech => (
                     <span key={tech} className="px-4 py-2 rounded-xl text-sm font-medium text-brand-text bg-brand-bg border border-brand-border group-hover:border-brand-orange/25 transition-all duration-300 hover:bg-brand-orange/10 hover:border-brand-orange/50 hover:text-brand-orange cursor-default">
                       {tech}
                     </span>
